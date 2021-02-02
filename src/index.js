@@ -8,6 +8,12 @@ const PORT = process.env.PORT || 4001;
 dotenv.config();
 
 const app = express();
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
 app.use(morgan());
 app.use(cors());
 
