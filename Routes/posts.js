@@ -24,7 +24,6 @@ postRouter.post("/", (req, res) => {
     const post = {
       id: data.length + 1,
       ...req.body,
-      name: "aziz",
     };
 
     data.push(post);
@@ -33,6 +32,12 @@ postRouter.post("/", (req, res) => {
   } catch (error) {
     return res.status(500).send(error);
   }
+});
+
+postRouter.put("/:id", (req, res) => {
+  let post = data.find((post) => (post.id = req.params.id));
+  // post = req.body;
+  res.end(JSON.stringify(post) + "is updated to" + JSON.stringify(req.body));
 });
 
 module.exports = postRouter;
