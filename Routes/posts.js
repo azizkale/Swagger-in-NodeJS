@@ -36,8 +36,16 @@ postRouter.post("/", (req, res) => {
 
 postRouter.put("/:id", (req, res) => {
   let post = data.find((post) => (post.id = req.params.id));
-  // post = req.body;
-  res.end(JSON.stringify(post) + "is updated to" + JSON.stringify(req.body));
+  post = req.body;
+
+  res.end(JSON.stringify(post) + "updated");
+});
+
+postRouter.delete("/:id", (req, res) => {
+  let post = data.find((post) => (post.id = req.params.id));
+  const index = data.indexOf(post);
+  data.splice(index, 1);
+  res.send(data);
 });
 
 module.exports = postRouter;
