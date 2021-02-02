@@ -1,0 +1,24 @@
+{
+  "name": "swagger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.12.11",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
