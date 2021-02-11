@@ -102,7 +102,7 @@ postRouter.get("/:id", (req, res) => {
  * @swagger
  * /posts:
  *   post:
- *     summary: Create a new book
+ *     summary: Create a new post
  *     tags: [Posts]
  *     requestBody:
  *       required: true
